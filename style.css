@@ -1,0 +1,54 @@
+/*Google Fonts*/
+.playfair-display-pixel {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+#backgroundVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+#loadingText {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 100px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    margin-top: 10vh;
+}
+
+#loadingText, #muteInstructions, #volumeControllers {
+    color: white;
+}
+
+/*Puntos Suspensivos*/
+.puntosSuspensivos {
+    display: inline-block;
+    color: white;
+}
+
+.puntosSuspensivos::after {
+    content: ''; /* Empieza vacío */
+    animation: loadingPoints 1.5s infinite steps(4); /* Animación infinita */
+    display: inline-block;
+    width: 1em;
+    text-align: left;
+}
+
+@keyframes loadingPoints {
+    0% { content: ''; }
+    25% { content: '.'; }
+    50% { content: '..'; }
+    75% { content: '...'; }
+}
