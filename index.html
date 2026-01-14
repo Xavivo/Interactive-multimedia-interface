@@ -3,9 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>prueba</h1>
+    <main id="mainContainer">
+        <h1 id="loadingText">JOINING SERVER . . .</h1>
+
+        <audio id="musicPlayer"></audio>
+
+        <div id="volumeControllers">
+            <button id="volDown">-</button>
+            <span id="volActual">50%</span>
+            <button id="volUp">+</button>
+        </div>
+
+        <p id="muteInstructions">Presiona espacio para <span id="muteStatus">mutear</span></p>
+
+        <footer id="links">
+            <a href="https://discord.com">Discord</a>
+            <a href="https://youtube.com">Youtube</a>
+            <a href="https://instagram.com">Instagram</a>
+        </footer>
+
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
