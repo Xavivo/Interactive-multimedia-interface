@@ -1,4 +1,4 @@
-/*Google Fonts*/
+/* Google Fonts */
 .playfair-display-pixel {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -48,6 +48,12 @@
 
 #loadingText, #muteInstructions, #volumeControllers {
     color: white;
+}
+
+#volumeContainer {
+    padding: 20px;
+    background-color: rgba(0, 255, 255, 0.5);
+    border-radius: 30px;
 }
 
 /*Puntos Suspensivos*/
