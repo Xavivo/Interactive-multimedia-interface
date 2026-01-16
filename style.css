@@ -50,10 +50,34 @@
     color: white;
 }
 
+#muteInstructions {
+    position: fixed;
+    bottom: 190px;
+    left: 20px;
+    z-index: 10;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 19px;
+    margin-left: 10px;
+}
+
 #volumeContainer {
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 30px;
+    border-radius: 30px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;}
+
+#songNameDisplay {
+    color: white;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 19px;
+    text-align: center;
+    min-height: 24px;
 }
 
 /*Puntos Suspensivos*/
@@ -66,7 +90,7 @@
     content: ''; /* Empieza vacío */
     animation: loadingPoints 1.5s infinite steps(4); /* Animación infinita */
     display: inline-block;
-    width: 1em;
+    width: 16px;
     text-align: left;
 }
 
@@ -85,7 +109,7 @@ button {
     padding: 10px 15px;
     cursor: pointer;
     font-family: 'Pixelify Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 19px;
     transition: 0.3s;
 }
 
