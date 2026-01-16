@@ -17,9 +17,9 @@ const loadingMessages = [
 
 // Array de Canciones
 const songs = [
-    { path: "audio/cancion1.mp3", name: "Key - Minecraft" },
-    { path: "audio/cancion2.mp3", name: "Door - Plains Biome" },
-    { path: "audio/cancion3.mp3", name: "Subwoofer lullaby - By C18" }
+    { path: "audio/cancion1.mp3", name: "Key - Minecraft", image: "assets/imagen1.jpg" },
+    { path: "audio/cancion2.mp3", name: "Door - Plains Biome", image: "assets/imagen2.jpg" },
+    { path: "audio/cancion3.mp3", name: "Subwoofer lullaby - C18", image: "assets/imagen3.jpg" }
 ];
 
 const textElement = document.getElementById('loadingText');
@@ -27,6 +27,7 @@ const audioPlayer = document.getElementById('musicPlayer');
 const volDisplay = document.getElementById('volActual');
 const muteStatus = document.getElementById('muteStatus');
 const songNameDisplay = document.getElementById('songNameDisplay');
+const songImageDisplay = document.getElementById('songImageDisplay');
 
 // variable de estado para la cancion actual
 let currentSongIndex = 0;
@@ -48,6 +49,8 @@ function playRandomSong() {
 function loadAndPlaySong() {
     audioPlayer.src = songs[currentSongIndex].path;
     songNameDisplay.textContent = songs[currentSongIndex].name;
+    songImageDisplay.src = songs[currentSongIndex].image;
+    songImageDisplay.alt = songs[currentSongIndex].name;
     audioPlayer.volume = 0.5; // empezar al 50% siempre
     audioPlayer.play().catch(error => {
         console.log("debes interactuar con la página para reproducir audio"); // IMPORTANTE: los navegadores bloquean la reproducción automática de audio sin antes haber interactuado con la página
